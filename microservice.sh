@@ -10,7 +10,7 @@ case "$1" in
         docker-compose -f docker-compose.yml build && docker-compose -f docker-compose.yml up
         ;;
     *)
-        echo "Usage: dataset.sh {develop | prod}" >&2
+        echo "Usage: microservice.sh {develop | prod}" >&2
         exit 1
         ;;
 esac
