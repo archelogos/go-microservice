@@ -1,0 +1,13 @@
+version: '3'
+services:
+  develop:
+    build: .
+    container_name: go-microservice-prod
+    ports:
+      - "3050"
+    environment:
+      GIN_MODE: release
+      PORT: 3050
+    command: start
+    volumes:
+      - ./microservice:/go/src/github.com/archelogos/go-microservice/microservice
