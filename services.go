@@ -1,4 +1,4 @@
-package services
+package main
 
 import "log"
 
@@ -7,8 +7,7 @@ type User struct {
 	Name string
 }
 
-// GetUser ...
-func GetUser(name string) User {
+func getUserService(name string) User {
 	log.Println("[SERVICE] Getting user")
 	return User{
 		Name: name,

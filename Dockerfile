@@ -1,8 +1,11 @@
-FROM golang
+FROM golang:1.8-alpine
 
 MAINTAINER sgordillogallardo@gmail.com
 ENV NAME archelogos
 ENV PROJECT go-microservice
+
+RUN apk update && apk upgrade && \
+    apk add --no-cache --update bash git 
 
 # Install dependencies
 RUN go get github.com/gin-gonic/gin
